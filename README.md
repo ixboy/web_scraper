@@ -81,6 +81,12 @@ Contributions, issues, and feature requests are welcome!
 
 Feel free to check the [issues page](https://github.com/ixboy/web_scraper/issues).
 
+## Acknowledgments
+
+-  ![](https://img.shields.io/badge/Microverse-blueviolet)
+
+- README Documentation by: [Oever González](https://twitter.com/NoTengoBattery)
+
 ## Show your support
 
 Give a ⭐️ if you like this project!
