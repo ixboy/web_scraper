@@ -1,3 +1,1 @@
-#!/usr/bin/env bash
-require 'nokogiri'
-require 'httparty'
+#!/usr/bin/env ruby

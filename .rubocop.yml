@@ -1,28 +1,30 @@
-#Style/FrozenStringLiteralComment:
-  #Enabled: false
-#Style/IfInsideElse:
-  #Enabled: false
-#Metrics/LineLength:
-  #Max: 120
-#Metrics/ModuleLength:
-  #Max: 200
-#Metrics/MethodLength:
-  #Max: 40
-#Style/GuardClause:
-  #Enabled: false
-#Style/For:
-  #Enabled: false
-#Metrics/CyclomaticComplexity:
-  #Max: 20
-#Metrics/PerceivedComplexity:
-  #Max: 20
-#Metrics/AbcSize:
-  #Enabled: false
-#Style/CaseEquality:
-  #Enabled: false
-#Metrics/BlockNesting:
-  #Enabled: false
-#Metrics/BlockLength:
-  #Max: 200
-#Style/BlockComments:
-  #Enabled: false
+Style/FrozenStringLiteralComment:
+  Enabled: false
+Style/IfInsideElse:
+  Enabled: false
+Metrics/LineLength:
+  Max: 250
+Metrics/ModuleLength:
+  Max: 200
+Metrics/MethodLength:
+  Max: 80
+Style/GuardClause:
+  Enabled: false
+Style/For:
+  Enabled: false
+Metrics/CyclomaticComplexity:
+  Max: 20
+Metrics/PerceivedComplexity:
+  Max: 20
+Metrics/AbcSize:
+  Enabled: false
+Style/CaseEquality:
+  Enabled: false
+Metrics/BlockNesting:
+  Enabled: false
+Metrics/BlockLength:
+  Max: 200
+Style/BlockComments:
+  Enabled: false
+Style/RedundantAssignment:
+  Enabled: false
