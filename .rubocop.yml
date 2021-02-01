@@ -28,3 +28,5 @@ Style/BlockComments:
   Enabled: false
 Style/RedundantAssignment:
   Enabled: false
+Style/Documentation:
+  Enabled: false
