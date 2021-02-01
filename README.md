@@ -3,7 +3,7 @@
 # Capstone Project: Ruby: Web Scraper
 > An `application` designed to scrap the web and retrieve information from  movie websites, such as the movie title, it's quality, year of release, download link etc, it retrieves data from movie websites like [Gostream](https://gostream.site/).
 
-![screenshot]()
+![screenshot](doc/screenshot.png)
 
 Web scraping is the process of using bots to extract content and data from a website. Unlike screen scraping, which only copies pixels displayed onscreen, web scraping extracts underlying HTML code and, with it, data stored in a database. The scraper can then replicate entire website content elsewhere.
 
@@ -13,7 +13,7 @@ I don't know about you, but I have always wanted to surf the web and download mo
 This application was designed to simplify the process of retrieving movie information from a website and then display it in your terminal or command prompt. And then you decide if you want to download it or stream it, giving you the direct link to accomplish the task.
 This tool is very easy to use, please follow the instructions bellow to install it and enjoy scraping the web :D.
 
-> If you are on *repl.it*, **please click [here](https://repl.it/@ixboy/webscraper#README.md)**.
+> If you are on *repl.it*, **please click [here](https://repl.it/@ixboy/scraper#main.rb)**.
 
 ## Built With
 - [Ruby](https://www.ruby-lang.org/en/)
@@ -24,8 +24,8 @@ This tool is very easy to use, please follow the instructions bellow to install 
   - [colorize](https://github.com/fazibear/colorize)
 
   ## Live Demo
-[![Run on Repl.it](https://github.com/ixboy/web_scraper/tree/feature/scraper)](https://repl.it/@ixboy/webscraper#README.md)
- > click [here](https://repl.it/@ixboy/webscraper#README.md)**.
+[![Run on Repl.it](https://github.com/ixboy/web_scraper/tree/feature/scraper)](https://repl.it/@ixboy/scraper#main.rb)
+ > click [here](https://repl.it/@ixboy/scraper#main.rb)**.
 
 ## Getting Started
 You have two options for using this program: running it locally or running it from the live demo.
