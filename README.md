@@ -9,7 +9,7 @@ Web scraping is the process of using bots to extract content and data from a web
 
 ## Documentation
 
-I don't know about you, but I have always wanted to surf the web and download movies or other public data freely without being annoyed by those pop-ups and ads from the internet. luckily I can do that now with this Web scraper that I have created using ruby programming language and few Gems.
+I don't know about you, but I have always wanted to surf the web and download movies or other public data freely without being annoyed by those pop-ups and ads from the internet. I'm glad I can do that now with this Web scraper that I've created using Ruby programming language and few Gems.
 This application was designed to simplify the process of retrieving movie info from a website and then display it in a terminal and then decide if you want to download it or stream it, giving you the direct link to accomplish the task.
 This tool is very easy to use, please follow the instructions bellow to install it and enjoy scraping the web :D.
 
