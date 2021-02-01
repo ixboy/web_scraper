@@ -34,18 +34,22 @@ class Pagination < Scraper
       puts "   |THIS IS PAGE: #{page}.        THIS WEBSITE HAS #{last_page} MORE PAGES.|".blue
       puts "   |         THERE'S #{films_per_page} MOVIES ON THIS PAGE.              |".light_blue.underline
       puts "\n"
-      puts '   Please type '.light_blue + 'exit'.red + ' to stop the the scraping tool.'.blue
-      puts '   Please type '.light_blue + 'previous '.red + 'to go back to previous page.'.blue
-      puts '   Please type '.light_blue + 'any key'.red + ' to continue to the next page...'.blue
-      command = gets.chomp.downcase
-      case command
-      when 'exit'
-        self.flag = true
-      when 'previous'
-        self.page -= 1
-      else
-        self.page += 1
-      end
+      puts '   Type '.magenta + 'exit'.red + ' to stop the the scraping tool...'.light_magenta
+      puts '   Type '.magenta + 'previous '.red + 'to go back to previous page...'.light_magenta
+      puts '   Type '.magenta + 'any key'.red + ' to continue to the next page...'.light_magenta
+      self.command = gets.chomp.downcase
+      choice
+    end
+  end
+
+  def choice
+    case command
+    when 'exit'
+      self.flag = true
+    when 'previous'
+      self.page -= 1
+    else
+      self.page += 1
     end
   end
 end

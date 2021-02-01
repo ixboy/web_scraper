@@ -1,5 +1,5 @@
 class Scraper
-  attr_accessor :page, :url, :p_url, :films_per_page, :last_page, :movies, :flag, :total
+  attr_accessor :page, :url, :p_url, :films_per_page, :last_page, :movies, :flag, :total, :command
 
   private
 
