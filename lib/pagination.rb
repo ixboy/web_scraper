@@ -1,7 +1,7 @@
 require 'colorize'
 require 'httparty'
 require 'nokogiri'
-require_relative 'lib/config'
+require_relative 'config'
 class Pagination < Scraper
   def run
     while page <= last_page && !flag
@@ -16,6 +16,7 @@ class Pagination < Scraper
         film = {
           title: movie.css('.qtip-title').text,
           quality: movie.css('.jtip-quality').text,
+          year: movie.css('div.jt-info a').text.gsub(/\D/, ''),
           url: movie.css('div.jtip-bottom a')[0].attributes['href'].value,
           ratings: movie.css('div .jt-imdb').text
         }
@@ -23,7 +24,7 @@ class Pagination < Scraper
         puts '=============================================================================='.light_blue
         puts '   Movie:'.light_blue + " #{film[:title]}  ".light_cyan + "|   *Quality: #{film[:quality]}  |".yellow
         puts "\n"
-        puts '   Year of released:'.light_blue + " #{film[:url]}   ".light_cyan + "|   *Ratings: #{film[:ratings]}  |".yellow
+        puts '   Year of released:'.light_blue + " #{film[:year]}   ".light_cyan + "|   *Ratings: #{film[:ratings]}  |".yellow
         puts "\n"
         puts "\n"
         puts "   stream or download it Now --->       #{film[:url]}".light_red

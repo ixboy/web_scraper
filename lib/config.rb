@@ -1,7 +1,8 @@
 class Scraper
   attr_accessor :page, :url, :p_url, :films_per_page, :last_page, :movies, :flag, :total
 
-  # private
+  private
+
   def initialize
     self.page = 1
     # self.total = 9071
