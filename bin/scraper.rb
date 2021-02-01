@@ -1,6 +1,7 @@
 #!/usr/bin/env ruby
 require 'colorize'
 require_relative '../lib/pagination'
+
 scraper = Pagination.new
 scraper.run
 def thanks
@@ -10,7 +11,7 @@ def thanks
   puts '           *****You can always come back for more movies :D*****'.light_green
   puts "\n"
   puts "\n"
-  puts '           ***********Created by: Ismael. Aka Ixboy**************'.green
+  puts '           ***********Created by: Ismael. Aka Ixboy**************'.light_yellow
 end
 
 thanks
