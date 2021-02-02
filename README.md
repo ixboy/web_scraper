@@ -24,8 +24,12 @@ This tool is very easy to use, please follow the instructions bellow to install 
   - [colorize](https://github.com/fazibear/colorize)
 
   ## Live Demo
-[![Run on Repl.it](https://github.com/ixboy/web_scraper/tree/feature/scraper)](https://repl.it/@ixboy/scraper#main.rb)
+  <img alt="Run on Repl.it" src="https://repl.it/badge/@ixboy/scraper#main.rb">
  > click [here](https://repl.it/@ixboy/scraper#main.rb)**.
+
+ ![screenshot](doc/livescreen.png)
+
+
 
 ## Getting Started
 You have two options for using this program: running it locally or running it from the live demo.
