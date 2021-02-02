@@ -3,15 +3,11 @@ require 'httparty'
 require 'nokogiri'
 require_relative 'config'
 class Pagination < Scraper
+  attr_accessor :doc
+
   def run
     while page <= last_page && !flag
-      self.url = 'https://gostream.site/123movies/'
-      self.p_url = url + "page/#{page}"
-      puts "\n"
-      parsed_page = Nokogiri::HTML(HTTParty.get(p_url).body)
-      doc = parsed_page.css('div #hidden_tip')
-      films_per_page = doc.count
-      self.last_page = (total.to_f / films_per_page).round
+      self.last_page = (total.to_f / start.count).round
       doc.each do |movie|
         film = {
           title: movie.css('.qtip-title').text,
@@ -33,7 +29,7 @@ class Pagination < Scraper
       end
       puts '_______________________________________________________________________________'.light_blue
       puts "   |THIS IS PAGE: #{page}.        THIS WEBSITE HAS #{last_page} MORE PAGES.|".blue
-      puts "   |         THERE'S #{films_per_page} MOVIES ON THIS PAGE.              |".light_blue.underline
+      puts "   |         THERE ARE #{films_per_page} MOVIES ON THIS PAGE.              |".light_blue.underline
       puts "\n"
       puts '   Type '.magenta + 'exit'.red + ' to stop the the scraping tool...'.light_magenta
       puts '   Type '.magenta + 'previous '.red + 'to go back to previous page...'.light_magenta
@@ -46,5 +42,6 @@ class Pagination < Scraper
       choice
       clear_terminal
     end
+    movies
   end
 end
