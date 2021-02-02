@@ -2,21 +2,15 @@ require 'httparty'
 require 'nokogiri'
 require_relative '../lib/config'
 require_relative '../lib/pagination'
-url = 'https://fmovies.to/movies'
+url = 'https://gostream.site/123movies/'
 def testing(url)
   unparsed = HTTParty.get(url)
   parsed = Nokogiri::HTML(unparsed)
-  parsed.css('.filmlist')
+  parsed.css('div #hidden_tip')
 end
 testing(url)
 
 scraper = Scraper.new
-
-describe '#testing' do
-  it 'should be a Nokogori NodeSet' do
-    expect(testing(url)).to be_a(Object)
-  end
-end
 
 describe Scraper do
   describe '#initialize' do
@@ -35,10 +29,23 @@ describe Scraper do
     end
   end
 
+  describe '#start' do
+    it 'should be a Nokogori NodeSet' do
+      expect(scraper.send(:start)).to be_a(Object)
+    end
+    it 'should not be a string' do
+      expect(scraper.send(:start)).to_not be_a(String)
+    end
+  end
+
   describe '#choice' do
     it 'should return true values only' do
       expected = scraper.choice
       expect(expected).to be_truthy
+    end
+    it 'should not be falsey' do
+      expected = scraper.choice
+      expect(expected).to_not be_falsey
     end
   end
 end
