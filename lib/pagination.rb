@@ -2,9 +2,8 @@ require 'colorize'
 require 'httparty'
 require 'nokogiri'
 require_relative 'config'
+require_relative 'utils'
 class Pagination < Scraper
-  attr_accessor :doc
-
   def run
     while page <= last_page && !flag
       self.last_page = (total.to_f / start.count).round
@@ -40,7 +39,7 @@ class Pagination < Scraper
         self.count = 1 if self.count <= 40
       end
       choice
-      clear_terminal
+      Utilities.clear_terminal
     end
     movies
   end

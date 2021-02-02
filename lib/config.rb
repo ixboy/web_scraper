@@ -1,5 +1,5 @@
 class Scraper
-  attr_accessor :page, :url, :p_url, :films_per_page, :last_page, :movies, :flag, :total, :command, :count
+  attr_accessor :page, :url, :p_url, :films_per_page, :last_page, :movies, :flag, :total, :command, :count, :doc
 
   def initialize
     self.page = 1
@@ -28,13 +28,5 @@ class Scraper
       self.page += 1
     end
   end
-
-  def clear_terminal
-    if RUBY_PLATFORM =~ /win32|win64|\.NET|windows|cygwin|mingw32/i
-      system('cls')
-    else
-      system('clear')
-    end
-  end
-  private :start, :clear_terminal
+  private :start
 end
