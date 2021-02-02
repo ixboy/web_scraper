@@ -24,7 +24,8 @@ This tool is very easy to use, please follow the instructions bellow to install 
   - [colorize](https://github.com/fazibear/colorize)
 
   ## Live Demo
-  <img alt="Run on Repl.it" src="https://repl.it/badge/@ixboy/scraper#main.rb">
+  <img src="doc/logo.png" alt="Run on Repl.it" data-canonical-src="https://repl.it/@ixboy/scraper#main.rb" style="max-width:100%;"
+
  > click [here](https://repl.it/@ixboy/scraper#main.rb)**.
 
  ![screenshot](doc/livescreen.png)
