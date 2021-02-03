@@ -59,7 +59,10 @@ Install the Gems by running `bundle install`. You may need to provide your user 
 - From the root directory(Web_Scraper), change directory into the bin directory by running the following command and start using the tool...
 
  * `ruby bin/scraper.rb`
+ 
+ - To run the Rspec test suites, from the root directory(Web_Scraper) after installing `ruby Gems` and installing `rspec`, just run the following command.
 
+ * `rspec`
 
 ### Preparing *repl.it*
 If you are running this program inside the live demo:
