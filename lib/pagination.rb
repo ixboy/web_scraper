@@ -41,6 +41,5 @@ class Pagination < Scraper
       choice
       Utilities.clear_terminal
     end
-    movies
   end
 end
