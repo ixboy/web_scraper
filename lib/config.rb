@@ -11,6 +11,14 @@ class Scraper
     self.film = {}
   end
 
+  def start
+    self.url = 'https://gostream.site/123movies/'
+    self.p_url = url + "page/#{page}"
+    puts "\n"
+    parsed_page = Nokogiri::HTML(HTTParty.get(p_url).body)
+    self.doc = parsed_page.css('div #hidden_tip')
+  end
+
   def run
     while page <= last_page && !flag
       self.last_page = (total.to_f / start.count).round
@@ -41,4 +49,6 @@ class Scraper
       self.page += 1
     end
   end
+
+  private :start, :choice
 end
