@@ -4,7 +4,7 @@ require 'nokogiri'
 require_relative 'config'
 require_relative 'utils'
 
-class Info_output < Scraper
+class InfoOutput < Scraper
   def prints
     puts '=============================================================================='.light_blue
     puts " #{count} -  Movie:".light_blue + " #{film[:title]}  ||".light_cyan + '    *Quality'.light_blue + "  #{film[:quality]}".yellow
