@@ -10,6 +10,8 @@ class Scraper
     self.count = 1
   end
 
+  private
+
   def start
     self.url = 'https://gostream.site/123movies/'
     self.p_url = url + "page/#{page}"
@@ -28,5 +30,4 @@ class Scraper
       self.page += 1
     end
   end
-  private :start
 end
