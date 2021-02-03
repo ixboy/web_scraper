@@ -8,9 +8,11 @@ require 'nokogiri'
 class InfoOutput < Scraper
   def prints
     puts '=============================================================================='.light_blue
-    puts " #{count} -  Movie:".light_blue + " #{film[:title]}  ||".light_cyan + '    *Quality'.light_blue + "  #{film[:quality]}".yellow
+    puts " #{count} -  Movie:".light_blue + " #{film[:title]}  ||"
+      .light_cyan + '    *Quality'.light_blue + "  #{film[:quality]}".yellow
     puts "\n"
-    puts '       Year of released:'.light_blue + " #{film[:year]}          ".light_cyan + '     *Ratings:'.light_blue + film[:ratings].to_s.yellow
+    puts '       Year of released:'.light_blue + " #{film[:year]}          "
+      .light_cyan + '     *Ratings:'.light_blue + film[:ratings].to_s.yellow
     puts "\n"
     puts "\n"
     puts "       stream or download it Now --->       #{film[:url]}".light_red
@@ -27,10 +29,8 @@ class InfoOutput < Scraper
     puts '   Type '.magenta + 'previous '.red + 'to go back to previous page...'.light_magenta
     puts '   Type '.magenta + 'any key'.red + ' to continue to the next page...'.light_magenta
     self.command = gets.chomp.downcase
-    if command == 'previous'
-      self.count -= (start.count * 2)
-      self.count = 1 if self.count <= 40
-    end
+    self.count -= (start.count * 2) if command == 'previous'
+    self.count = 1 if self.count <= 40
   end
 
   def thanks
@@ -51,7 +51,9 @@ scraper = InfoOutput.new
 scraper.run
 scraper.thanks
 sleep 6
-puts(scraper.movies.map { |x| "#{x.values[0]}:   #{x.values[1]} - #{x.values[2]}".magenta + "                 ======>  #{x.values[3]}".light_blue }.uniq)
+puts(scraper.movies.map do |x|
+  "#{x.values[0]}:   #{x.values[1]} - #{x.values[2]}".magenta + "                 ======>  #{x.values[3]}".light_blue
+end.uniq)
 
 # scraper.movies.map { |k, v| puts "Key: #{k[0]}, Value: #{v[0]}" }
 # scraper.movies.map { |key, value| puts "#{key.key} : #{value.value}" }

@@ -1,30 +1,50 @@
-Style/FrozenStringLiteralComment:
-  Enabled: false
-Style/IfInsideElse:
-  Enabled: false
-Metrics/LineLength:
-  Max: 250
-Metrics/ModuleLength:
-  Max: 200
+AllCops:
+  Exclude:
+    - "Guardfile"
+    - "Rakefile"
+
+  DisplayCopNames: true
+
+Layout/LineLength:
+  Max: 120
 Metrics/MethodLength:
-  Max: 80
-Style/GuardClause:
-  Enabled: false
-Style/For:
-  Enabled: false
-Metrics/CyclomaticComplexity:
-  Max: 20
-Metrics/PerceivedComplexity:
   Max: 20
 Metrics/AbcSize:
-  Enabled: false
-Style/CaseEquality:
-  Enabled: false
-Metrics/BlockNesting:
-  Enabled: false
+  Max: 50
+Metrics/ClassLength:
+  Max: 150
 Metrics/BlockLength:
-  Max: 200
-Style/BlockComments:
-  Enabled: false
+  ExcludedMethods: ['describe']
+  Max: 30
+
+
 Style/Documentation:
+  Enabled: false
+Style/ClassAndModuleChildren:
+  Enabled: false
+Style/EachForSimpleLoop:
+  Enabled: false
+Style/AndOr:
+  Enabled: false
+Style/DefWithParentheses:
+  Enabled: false
+Style/FrozenStringLiteralComment:
+  EnforcedStyle: never
+
+Layout/HashAlignment:
+  EnforcedColonStyle: key
+Layout/ExtraSpacing:
+  AllowForAlignment: false
+Layout/MultilineMethodCallIndentation:
+  Enabled: true
+  EnforcedStyle: indented
+Lint/RaiseException:
+  Enabled: false
+Lint/StructNewOverride:
+  Enabled: false
+Style/HashEachMethods:
+  Enabled: false
+Style/HashTransformKeys:
+  Enabled: false
+Style/HashTransformValues:
   Enabled: false
