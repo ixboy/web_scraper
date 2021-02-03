@@ -5,7 +5,7 @@ require_relative '../lib/pagination'
 fake_url = 'https://fmovies.to/movies'
 def testing(url)
   parsed = Nokogiri::HTML(HTTParty.get(url).body)
-  parsed.css(('.filmlist'))
+  parsed.css('.filmlist')
 end
 testing(fake_url)
 
