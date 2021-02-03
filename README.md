@@ -93,7 +93,7 @@ Feel free to check the [issues page](https://github.com/ixboy/web_scraper/issues
 
 -  ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-- README Documentation by: [Oever González](https://twitter.com/NoTengoBattery)
+- README template by: [Oever González](https://github.com/NoTengoBattery)
 
 ## Show your support
 
