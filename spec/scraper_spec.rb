@@ -23,7 +23,7 @@ describe Scraper do
       expected = scraper.flag
       expect(expected).to be_falsey
     end
-    it 'should NOT be true' do
+    it 'should not  be true' do
       expected = scraper.flag
       expect(expected).not_to be true
     end
@@ -72,29 +72,19 @@ describe Scraper do
 end
 
 describe InfoOutput do
-  it 'should be an Integer' do
-    expected = info.prints
-    expect(expected).to be_a(Integer)
-  end
-  it 'should not be a string' do
-    expected = info.prints
-    expect(expected).not_to be_a(String)
-  end
-  it 'should to be between 1 to 227' do
-    expected = info.prints
-    expect(expected).to be_between(1, 226)
-  end
-  it 'should not equal 0' do
-    expected = info.prints
-    expect(expected).not_to eql(0)
-  end
+  describe '#prints' do
+    it 'should be an Integer' do
+      expected = info.prints
+      expect(expected).to be_a(Integer)
+    end
 
-  it 'return an Integer' do
-    expected = change_page
-    expect(expected).to be_a(Integer)
+    it 'should not be a string' do
+      expected = info.prints
+      expect(expected).not_to be_a(String)
+    end
+    it 'should to be between 1 to 227' do
+      expected = info.prints
+      expect(expected).to be_between(1, 226)
+    end
   end
-  # it 'should not be zero' do
-  #   expected = info.change_page
-  #   expect(expected).to be_between(1, 226)
-  # end
 end

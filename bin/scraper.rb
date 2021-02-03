@@ -46,4 +46,4 @@ end
 
 scraper = InfoOutput.new
 scraper.run
-scraper.thanks
+# scraper.thanks
