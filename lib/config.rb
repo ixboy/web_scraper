@@ -37,6 +37,7 @@ class Scraper
       choice
       Utilities.clear_terminal
     end
+    movies
   end
 
   def choice
@@ -49,6 +50,5 @@ class Scraper
       self.page += 1
     end
   end
-
   private :start, :choice
 end

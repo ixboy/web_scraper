@@ -32,8 +32,18 @@ class InfoOutput < Scraper
       self.count = 1 if self.count <= 40
     end
   end
+
+  def thanks
+    puts '           ***********You terminated the program!!!!************'.light_green
+    puts '           ***********Thank You! for using this tool************'.light_green
+    puts '           ******************Enjoy your movie*******************'.light_green
+    puts '           *****You can always come back for more movies :D*****'.light_green
+    puts "\n"
+    puts "\n"
+    puts '           ***********Created by: Ismael. Aka Ixboy**************'.light_yellow
+  end
 end
 
 scraper = InfoOutput.new
 scraper.run
-Utilities.thanks
+scraper.thanks
