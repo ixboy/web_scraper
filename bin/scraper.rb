@@ -40,10 +40,18 @@ class InfoOutput < Scraper
     puts '           *****You can always come back for more movies :D*****'.light_green
     puts "\n"
     puts "\n"
+    puts "\n"
+    puts '           Please wait'.light_magenta + ' 6 SECONDS '.light_red + 'for your list of movies...'.light_magenta
+    puts "\n"
     puts '           ***********Created by: Ismael. Aka Ixboy**************'.light_yellow
   end
 end
 
 scraper = InfoOutput.new
 scraper.run
-# scraper.thanks
+scraper.thanks
+sleep 6
+puts(scraper.movies.map { |x| "#{x.values[0]}:   #{x.values[1]} - #{x.values[2]}".magenta + "                 ======>  #{x.values[3]}".light_blue }.uniq)
+
+# scraper.movies.map { |k, v| puts "Key: #{k[0]}, Value: #{v[0]}" }
+# scraper.movies.map { |key, value| puts "#{key.key} : #{value.value}" }
