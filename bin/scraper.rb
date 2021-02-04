@@ -6,7 +6,7 @@ require 'httparty'
 require 'nokogiri'
 
 class InfoOutput < Scraper
-  def run
+  def pagination
     while page <= last_page && !flag
       self.last_page = (total.to_f / start.count).round
       doc.each do |movie|
@@ -34,8 +34,7 @@ class InfoOutput < Scraper
     puts "\n"
     puts '       Year of released:'.light_blue + " #{film[:year]}          "
       .light_cyan + '     *Ratings:'.light_blue + film[:ratings].to_s.yellow
-    puts "\n"
-    puts "\n"
+    2.times { puts "\n" }
     puts "       stream or download it Now --->       #{film[:url]}".light_red
     puts '*******************************************************************************'.light_blue
     self.count += 1
@@ -55,23 +54,22 @@ class InfoOutput < Scraper
   end
 
   def thanks
+    10.times { puts "\n" }
     puts '           ***********You terminated the program!!!!************'.light_green
     puts '           ***********Thank You! for using this tool************'.light_green
     puts '           ******************Enjoy your movie*******************'.light_green
     puts '           *****You can always come back for more movies :D*****'.light_green
-    puts "\n"
-    puts "\n"
-    puts "\n"
-    puts '           Please wait'.light_magenta + ' 6 SECONDS '.light_red + 'for your list of movies...'.light_magenta
+    3.times { puts "\n" }
+    puts '           Please wait'.light_magenta + ' 5 SECONDS '.light_red + 'for your list of movies...'.light_magenta
     puts "\n"
     puts '           ***********Created by: Ismael. Aka Ixboy**************'.light_yellow
   end
 end
 
 scraper = InfoOutput.new
-scraper.run
+scraper.pagination
 scraper.thanks
-sleep 6
+sleep 5
 puts(scraper.movies.map do |x|
   "#{x.values[0]}:   #{x.values[1]} - #{x.values[2]}".magenta + "                 ======>  #{x.values[3]}".light_blue
 end.uniq)
