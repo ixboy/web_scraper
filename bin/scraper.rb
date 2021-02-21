@@ -70,9 +70,7 @@ scraper = InfoOutput.new
 scraper.pagination
 scraper.thanks
 sleep 5
+2.times { puts "\n" }
 puts(scraper.movies.map do |x|
   "#{x.values[0]}:   #{x.values[1]} - #{x.values[2]}".magenta + "                 ======>  #{x.values[3]}".light_blue
 end.uniq)
-
-# scraper.movies.map { |k, v| puts "Key: #{k[0]}, Value: #{v[0]}" }
-# scraper.movies.map { |key, value| puts "#{key.key} : #{value.value}" }
