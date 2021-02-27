@@ -79,7 +79,7 @@ By following the steps in either the live demo or in the local environment, you 
 
 - GitHub: [@ixboy](https://github.com/ixboy)
 - Twitter: [@ismaelixboy](https://twitter.com/ismaelixboy)
-- LinkedIn: [ismael-antonio](https://www.linkedin.com/in/ismael-antonio-0b7712114/)
+- LinkedIn: [ismael-antonio](https://www.linkedin.com/in/ismaelantonio/)
 
 ## 🤝 Contributing
 
