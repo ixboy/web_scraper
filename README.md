@@ -1,4 +1,4 @@
-# Capstone Project: Ruby: Web Scraper
+# Ruby: Web Scraper
 > An `application` designed to scrap the web and retrieve information from  movie websites, such as the movie title, it's quality, year of release, download link etc, it retrieves data from movie websites like [Gostream](https://gostream.site/).
 
 ![screenshot](doc/screenshot.png)
